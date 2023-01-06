@@ -39,7 +39,7 @@ class BeatControllerTest {
                     {
                         "name": "Beat 2",
                         "tempo": 128,
-                        "beatList": [
+                        "soundList": [
                                         {
                                             "name":"beatChain1",\s
                                             "pads":[true, false, true, false, true, false, true, false]
@@ -53,7 +53,7 @@ class BeatControllerTest {
                   {
                       "name": "Beat 2",
                       "tempo": 128,
-                      "beatList": [
+                      "soundList": [
                                       {
                                           "name":"beatChain1",\s
                                           "pads":[true, false, true, false, true, false, true, false]
@@ -79,7 +79,7 @@ class BeatControllerTest {
                         "id": "123",
                         "name": "Beat 2",
                         "tempo": 128,
-                        "beatList": [
+                        "soundList": [
                                         {
                                             "name":"beatChain1",
                                             "pads":[true, false, true, false, true, false, true, false]
