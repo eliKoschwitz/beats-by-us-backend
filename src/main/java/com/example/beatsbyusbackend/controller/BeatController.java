@@ -12,7 +12,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @RequestMapping("/api/beats")
 public class BeatController {
-
     private final BeatService beatService;
 
     @GetMapping
@@ -28,5 +27,10 @@ public class BeatController {
     @PostMapping
     public Beat saveBeat(@RequestBody Beat beat){
         return beatService.saveBeat(beat);
+    }
+
+    @DeleteMapping("/{id}")
+    public void delete (@PathVariable String id) {
+        beatService.deleteByID(id);
     }
 }

@@ -24,4 +24,8 @@ public class BeatService {
     public Optional<Beat> findById(String id) {
         return beatRepo.findById(id);
     }
+
+    public void deleteByID(String id) {
+        beatRepo.deleteById(id);
+    }
 }

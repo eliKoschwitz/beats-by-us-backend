@@ -11,12 +11,7 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
-/*
-  {
-                 "name": "Beat 1",
-                 "tempo": 128
-            }
-  */
+
 @SpringBootTest
 @AutoConfigureMockMvc
 @DirtiesContext(classMode = DirtiesContext.ClassMode.BEFORE_EACH_TEST_METHOD)
@@ -28,15 +23,14 @@ class BeatControllerTest {
     void getBeat_shouldReturnEmptyList() throws Exception {
         //GIVEN
         String expectedJSON = """
-            [
-            ]
-            """;
+                [
+                ]
+                """;
         //WHEN & THEN
         mvc.perform(MockMvcRequestBuilders.get("/api/beats"))
                 .andExpect(status().isOk())
                 .andExpect(content().json(expectedJSON));
     }
-
 
     @Test
     void addBeat_shouldReturnsAddedBeat() throws Exception {
@@ -71,10 +65,47 @@ class BeatControllerTest {
 
         //WHEN & THEN
         mvc.perform(MockMvcRequestBuilders.post("/api/beats")
-                    .contentType(MediaType.APPLICATION_JSON)
-                    .content(requestBody))
-                    .andExpect(status().isOk())
-                    .andExpect(content().json(expectedJSON));
-        }
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(requestBody))
+                .andExpect(status().isOk())
+                .andExpect(content().json(expectedJSON));
+    }
 
+    @Test
+    void deleteBeat_whenIDValid_thenDeleteBeat() throws Exception {
+        //GIVEN
+        String requestBody = """
+                    {
+                        "id": "123",
+                        "name": "Beat 2",
+                        "tempo": 128,
+                        "beatList": [
+                                        {
+                                            "name":"beatChain1",
+                                            "beats":[true, false, true, false, true, false, true, false]
+                                         }
+                                
+                                    ]
+                    }
+                """;
+
+        String emptyJSON = """
+                [
+                ]
+                """;
+
+        //WHEN & THEN
+        mvc.perform(MockMvcRequestBuilders.post("/api/beats")
+                        .contentType(MediaType.APPLICATION_JSON)
+                        .content(requestBody))
+                .andExpect(status().isOk())
+                .andExpect(content().json(requestBody));
+
+        mvc.perform(MockMvcRequestBuilders.delete("/api/beats/123"))
+                .andExpect(status().isOk());
+
+        mvc.perform(MockMvcRequestBuilders.get("/api/beats"))
+                .andExpect(status().isOk())
+                .andExpect(content().json(emptyJSON));
+    }
 }
