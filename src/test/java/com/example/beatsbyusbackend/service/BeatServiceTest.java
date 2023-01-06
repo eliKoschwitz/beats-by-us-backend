@@ -16,10 +16,10 @@ import java.util.Optional;
 class BeatServiceTest {
 
     private Beat createBeat() {
-        boolean[] arrayBeats = new boolean[]{true, true, true, true, true, true, true, true};
+        boolean[] arrayPads = new boolean[]{true, true, true, true, true, true, true, true};
 
         List<BeatChain> beatChain = new ArrayList<>();
-        beatChain.add(new BeatChain("BeatChain1", arrayBeats));
+        beatChain.add(new BeatChain("BeatChain1", arrayPads));
 
         return new Beat("1", "Beat1", 120, beatChain);
 

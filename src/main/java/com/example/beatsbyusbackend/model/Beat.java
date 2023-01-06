@@ -12,5 +12,5 @@ public class Beat {
     private String id;
     private String name;
     private int tempo;
-    private List<BeatChain> beatList;
+    private List<BeatChain> soundList;
 }
