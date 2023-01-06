@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import com.example.beatsbyusbackend.repo.BeatRepo;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
@@ -18,5 +19,9 @@ public class BeatService {
 
     public Beat saveBeat(Beat beat) {
         return beatRepo.save(beat);
+    }
+
+    public Optional<Beat> findById(String id) {
+        return beatRepo.findById(id);
     }
 }
