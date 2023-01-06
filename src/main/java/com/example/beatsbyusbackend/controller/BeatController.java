@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.*;
 import com.example.beatsbyusbackend.service.BeatService;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,6 +18,11 @@ public class BeatController {
     @GetMapping
     public List<Beat> findAllBeat(){
         return beatService.findAllBeat();
+    }
+
+    @GetMapping("/{id}")
+    public Optional<Beat> findByID(@PathVariable String id ){
+        return beatService.findById(id);
     }
 
     @PostMapping
