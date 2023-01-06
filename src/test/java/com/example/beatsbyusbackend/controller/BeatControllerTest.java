@@ -42,7 +42,7 @@ class BeatControllerTest {
                         "beatList": [
                                         {
                                             "name":"beatChain1",\s
-                                            "beats":[true, false, true, false, true, false, true, false]
+                                            "pads":[true, false, true, false, true, false, true, false]
                                          }
                                 
                                     ]
@@ -56,7 +56,7 @@ class BeatControllerTest {
                       "beatList": [
                                       {
                                           "name":"beatChain1",\s
-                                          "beats":[true, false, true, false, true, false, true, false]
+                                          "pads":[true, false, true, false, true, false, true, false]
                                        }
                   
                                   ]
@@ -82,7 +82,7 @@ class BeatControllerTest {
                         "beatList": [
                                         {
                                             "name":"beatChain1",
-                                            "beats":[true, false, true, false, true, false, true, false]
+                                            "pads":[true, false, true, false, true, false, true, false]
                                          }
                                 
                                     ]

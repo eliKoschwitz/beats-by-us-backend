@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class BeatChain {
     private String name;
-    private boolean[] beats = new boolean[8];
+    private boolean[] pads = new boolean[8];
 }
