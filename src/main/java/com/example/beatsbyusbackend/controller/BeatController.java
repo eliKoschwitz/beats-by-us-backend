@@ -1,9 +1,9 @@
-package controller;
+package com.example.beatsbyusbackend.controller;
 
 import lombok.RequiredArgsConstructor;
-import model.Beat;
+import com.example.beatsbyusbackend.model.Beat;
 import org.springframework.web.bind.annotation.*;
-import service.BeatService;
+import com.example.beatsbyusbackend.service.BeatService;
 
 import java.util.List;
 

@@ -1,9 +1,9 @@
-package service;
+package com.example.beatsbyusbackend.service;
 
 import lombok.RequiredArgsConstructor;
-import model.Beat;
+import com.example.beatsbyusbackend.model.Beat;
 import org.springframework.stereotype.Service;
-import repo.BeatRepo;
+import com.example.beatsbyusbackend.repo.BeatRepo;
 
 import java.util.List;
 

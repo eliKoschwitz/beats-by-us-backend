@@ -1,4 +1,4 @@
-package model;
+package com.example.beatsbyusbackend.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

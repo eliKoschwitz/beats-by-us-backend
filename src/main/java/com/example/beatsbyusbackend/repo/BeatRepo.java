@@ -1,6 +1,6 @@
-package repo;
+package com.example.beatsbyusbackend.repo;
 
-import model.Beat;
+import com.example.beatsbyusbackend.model.Beat;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 
