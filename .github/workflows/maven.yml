@@ -14,9 +14,6 @@ on:
   pull_request:
     branches: [ "master" ]
 
-env:
-  DatabasePort: 27017
-
 jobs:
   build:
 
