@@ -1,4 +1,0 @@
-spring.data.mongodb.url:
-  database: beatsByUsDb
-  host: localhost
-  port: "${DatabasePort}"
